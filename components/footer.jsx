@@ -91,7 +91,7 @@ const navigation = {
     return (
       <footer className="relative bg-gradient-to-br from-indigo-900 to-gray-900 backdrop-blur-sm overflow-hidden" aria-labelledby="footer-heading">
         {/* Scrolling background text container */}
-        <div className="pointer-events-none select-none absolute right-0 top-0 h-full w-3/4 z-0 flex items-center justify-end pr-8 overflow-hidden"
+        <div className="pointer-events-none select-none absolute right-0 top-0 h-full w-3/4 z-0 hidden md:flex items-center justify-end pr-8 overflow-hidden"
              style={{
                maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
@@ -109,7 +109,7 @@ const navigation = {
             Footer
           </h2>
           <div className="xl:grid xl:grid-cols-2 xl:gap-2">
-            <div className="grid grid-cols-2 gap-8 xl:col-span-2 xl:col-start-1">
+            <div className="grid grid-cols-1 gap-8 xl:col-span-2 xl:col-start-1">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Information</h3>
