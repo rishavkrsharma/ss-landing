@@ -1,10 +1,8 @@
-
 const navigation = {
-    solutions: [
-      { name: 'Marketing', href: '#' },
-      { name: 'Analytics', href: '#' },
-      { name: 'Commerce', href: '#' },
-      { name: 'Insights', href: '#' },
+    contact: [
+      { label: 'Address', detail: '1212B, 12th Floor, Tower A, Phase-I, Spectrum Metro Mall, Sector-75, Noida, UP-201301' },
+      { label: 'Email', detail: 'legal@singhsharma.in' },
+      { label: 'Phone', detail: '+91 9560103269 | 8877777345' },
     ],
     support: [
       { name: 'Pricing', href: '#' },
@@ -91,87 +89,59 @@ const navigation = {
   
   export default function Footer() {
     return (
-      <footer className="bg-gray-800" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.solutions.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.support.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.company.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+      <footer className="relative bg-gradient-to-br from-indigo-900 to-gray-900 backdrop-blur-sm overflow-hidden" aria-labelledby="footer-heading">
+        {/* Scrolling background text container */}
+        <div className="pointer-events-none select-none absolute right-0 top-0 h-full w-3/4 z-0 flex items-center justify-end pr-8 overflow-hidden"
+             style={{
+               maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
+             }}>
+          <span className="text-[6vw] sm:text-[5vw] md:text-[4vw] lg:text-[3vw] font-extrabold uppercase text-white/4 whitespace-nowrap flex">
+            <div className="flex flex-col items-end justify-center">
+              <span>SINGH SHARMA</span>
+              <span className="text-[3vw] sm:text-[2.8vw] md:text-[2vw] lg:text-[1.2vw] mt-[-10px]">ADVOCATES & SOLICITORS</span>
             </div>
-            <div className="mt-8 xl:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Subscribe to our newsletter
-              </h3>
-              <p className="mt-4 text-base text-gray-300">
-                The latest news, articles, and resources, sent to your inbox weekly.
-              </p>
-             
+          </span>
+        </div>
+        {/* Main footer content (z-10 to be above the marquee) */}
+        <div className="relative z-10 max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-8 lg:px-8">
+          <h2 id="footer-heading" className="sr-only">
+            Footer
+          </h2>
+          <div className="xl:grid xl:grid-cols-2 xl:gap-2">
+            <div className="grid grid-cols-2 gap-8 xl:col-span-2 xl:col-start-1">
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Information</h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {navigation.contact.map((item) => (
+                      <li key={item.label}>
+                        <p className="text-base text-gray-300">
+                          <strong>{item.label}:</strong> {item.detail}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+              </div>
             </div>
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-            <div className="flex space-x-6 md:order-2">
+            {/* <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
               ))}
-            </div>
+            </div> */}
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2020 Workflow, Inc. All rights reserved.
+              &copy; 2025 SINGH SHARMA Inc. All rights reserved.
+            </p>
+            {/* Add 'Made with love in India' text */}
+            <p className="mt-2 text-sm text-gray-500 md:mt-0 md:order-1">
+              Made with ❤️ in India
             </p>
           </div>
         </div>
