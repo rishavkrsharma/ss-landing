@@ -96,7 +96,7 @@ const navigation = {
                maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
              }}>
-          <span className="text-[6vw] sm:text-[5vw] md:text-[4vw] lg:text-[3vw] font-extrabold uppercase text-white/4 whitespace-nowrap flex">
+          <span className="text-[6vw] mr-28 sm:text-[5vw] md:text-[4vw] lg:text-[3vw] font-extrabold uppercase text-white/4 whitespace-nowrap flex">
             <div className="flex flex-col items-end justify-center">
               <span>SINGH SHARMA</span>
               <span className="text-[3vw] sm:text-[2.8vw] md:text-[2vw] lg:text-[1.2vw] mt-[-10px]">ADVOCATES & SOLICITORS</span>
