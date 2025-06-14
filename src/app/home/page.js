@@ -56,7 +56,7 @@ export default function Home() {
               {texts[currentIndex]}
             </h1>
             <p className="mt-8 text-lg text-pretty text-gray-500 sm:text-xl/8">
-              We are preparing to launch our legal services platform. Our team of experienced lawyers is working hard to bring you the best possible legal services.
+              We are preparing to launch our legal services platform. Our team of experienced lawyers is working hard to bring you the best possible legal services. Keep checking back for updates!
             </p>
             {/* <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
