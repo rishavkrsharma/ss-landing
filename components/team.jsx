@@ -20,6 +20,12 @@ const coreTeamData = [
     description: ' Aseem Gupta is a chartered accountant with over 35 years of experience in tax planning, compliance, and business management. During his long illustrious career, Aseem has advised a number of MNCs and domestic companies with regard to tax planning, merger and acquisition, de-merger, corporate restructuring, regulatory compliances, and risk management. He regularly advises clients from the Real Estate, QSR, IT, Retail, Hospitality, and Healthcare sectors. Mr. Gupta is associated with Singh Sharma & Associates in the capacity of a Consultant and regularly advises our clients in areas of tax planning and regulatory compliance. Beyond his technical expertise, Mr. Gupta is known for his strategic insights and pragmatic approach, helping businesses navigate complex financial landscapes with confidence.',
     avatar: '/team/aseem.jpeg',
   },
+  {
+    name: 'Pushpesh Kumar Kashyap',
+    title: 'Associate',
+    description: 'A Chartered Accountant with a keen analytical mindset, Pushpesh Kumar Kashyap brings a wealth of expertise in financial management, tax compliance, and business advisory services. He is adept at navigating complex regulatory frameworks and offers strategic guidance to organizations on financial planning, tax optimization, and risk management. With a strong commitment to accuracy and integrity, Pushpesh supports businesses in achieving their fiscal objectives, ensuring compliance with statutory requirements, and driving sustainable growth across diverse sectors.',
+    avatar: '/team/pushpesh.jpeg',
+  },
 ];
 
 const teamData = [
@@ -53,12 +59,7 @@ const teamData = [
     description: ' Avinash Kumar is an advocate who specializes in commercial and company laws. He regularly advises and represents clients in insolvency and company law matters. He assists clients through the complexities of bankruptcy filings, restructuring, and liquidation processes, ensuring their interests are safeguarded and optimal outcomes are achieved. Avinash has a profound understanding of property law, adeptly handling a wide range of property related issues. He offers comprehensive legal services in matters pertaining to RERA Act. His meticulous attention to detail and thorough knowledge of property regulations ensure clients receive sound legal advice and effective solutions.',
     avatar: '/team/avinash.jpeg',
   },
-  {
-    name: 'Pushpesh Kumar Kashyap',
-    title: 'Associate',
-    description: 'A Chartered Accountant with a keen analytical mindset, Pushpesh Kumar Kashyap brings a wealth of expertise in financial management, tax compliance, and business advisory services. He is adept at navigating complex regulatory frameworks and offers strategic guidance to organizations on financial planning, tax optimization, and risk management. With a strong commitment to accuracy and integrity, Pushpesh supports businesses in achieving their fiscal objectives, ensuring compliance with statutory requirements, and driving sustainable growth across diverse sectors.',
-    avatar: '/team/pushpesh.jpeg',
-  },
+  
 ];
 
 export default function Team() {
@@ -88,11 +89,11 @@ export default function Team() {
               Meet our core team—dedicated legal experts committed to excellence, integrity, and strategic advocacy
             </p>
           </div>
-          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
+          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-2 lg:gap-8">
             {coreTeamData.map((person) => (
               <li key={person.name} className="py-10 px-6 bg-gray-50 text-center rounded-lg xl:px-10">
                 <div className="space-y-6 xl:space-y-10">
-                  <img className="mx-auto w-full h-60 rounded-xl object-cover" src={person.avatar} alt={person.name} />
+                  <img className="mx-auto w-100 h-100 rounded-2xl object-cover" src={person.avatar} alt={person.name} />
                   <div className="space-y-2">
                     <div className="font-medium text-lg leading-6 space-y-1">
                       <h3 className="text-gray-900">{person.name}</h3>
@@ -106,7 +107,7 @@ export default function Team() {
           </ul>
 
           {/* Our Team Section */}
-          <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mt-16">
+          {/* <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center mt-16">
             <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Meet Our Team</h2>
             <p className="text-xl text-gray-500">
               Our experienced professionals are dedicated to providing exceptional legal counsel.
@@ -127,7 +128,7 @@ export default function Team() {
                 </div>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
 
